@@ -11,58 +11,6 @@ A full-stack Multi-Tenant SaaS Application where multiple organizations (tenants
 - ✅ PostgreSQL relational database
 - ✅ Dockerized Backend + Frontend
 - ✅ REST API with Swagger documentation
-🧠 Architecture Overview
-Client (React)
-   |
-   | JWT
-   ↓
-Backend (Node.js + Express)
-   |
-   | Sequelize ORM
-   ↓
-PostgreSQL (Multi-Tenant Data)
-
-
-
-📂 Project Structure
-multi-tenant-saas/
-│
-├── backend/
-│   ├── server.js
-│   ├── routes/
-│   │   ├── auth.routes.js
-│   │   ├── project.routes.js
-│   │   ├── task.routes.js
-│   ├── middleware/
-│   │   ├── auth.middleware.js
-│   │   ├── tenant.middleware.js
-│   ├── models/
-│   │   ├── User.js
-│   │   ├── Tenant.js
-│   │   ├── Project.js
-│   │   ├── Task.js
-│   ├── swagger.yaml
-│   └── Dockerfile
-│
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Login.js
-│   │   │   ├── Register.js
-│   │   │   ├── Dashboard.js
-│   │   │   ├── Projects.js
-│   │   │   ├── Tasks.js
-│   │   │   ├── Subscription.js
-│   │   ├── components/
-│   │   │   ├── Layout.js
-│   │   │   └── Sidebar.js
-│   │   ├── services/api.js
-│   │   └── utils/ProtectedRoute.js
-│   └── Dockerfile
-│
-├── docker-compose.yml
-└── README.md
-
 
 
 🔐 Authentication & Security
@@ -80,17 +28,6 @@ multi-tenant-saas/
 - Tasks
 - All queries are filtered by tenant automatically
 
-## 💳 Subscription Plans
-
-| Plan        | Max Users | Max Projects |
-|-------------|-----------|--------------|
-| **Free**    | 5         | 3            |
-| **Pro**     | 25        | 15           |
-| **Enterprise** | 100    | 50           |
-
-
-- New tenants start with Free plan
-- Limits enforced at API level
 
 🗄️ Database Tables
 - tenants
